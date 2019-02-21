@@ -1,6 +1,6 @@
 # Speech to Text
 
-Fill an form input using Google Speech to Text API
+Fill a form input using Google Speech to Text API
 
 ## Getting Started
 
