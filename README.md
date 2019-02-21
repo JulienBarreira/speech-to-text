@@ -1,6 +1,6 @@
 # Speech to Text
 
-Fill an input field using Google Speech to Text API
+Fill an form input using Google Speech to Text API
 
 ## Getting Started
 
@@ -12,7 +12,7 @@ You need [Composer](https://getcomposer.org/) to install this repository.
 
 Go to [https://cloud.google.com/speech-to-text/](https://cloud.google.com/speech-to-text/) and create an account to get a "credential.json" file, and paste it in the root directory.
 
-Install dependencies
+Install dependencies:
 
 ```
 composer install
