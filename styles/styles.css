@@ -1,0 +1,150 @@
+body {
+    background: #333;
+    font-family: arial, sans-serif;
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+form {
+    position: relative;
+}
+input {
+    box-sizing: border-box;
+    height: 50px;
+    width: 300px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 25px;
+    background: #efefef;
+}
+input:focus {
+    outline: none;
+}
+.btn {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    height: 42px;
+    width: 42px;
+    background: #777;
+    border-radius: 50%;
+    z-index: 1;
+}
+.btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #777;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+}
+.btn:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 34px;
+    width: 34px;
+    background: url('../images/micro.svg') no-repeat center;
+    border-radius: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: .3s ease-in-out;
+}
+.volume {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 95%;
+    width: 95%;
+    background: red;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 6px;
+    width: 6px;
+    margin-left: -3px;
+    margin-top: -3px;
+    border-radius: 50%;
+    transform: translateY(20px);
+    opacity: 0;
+    z-index: 10;
+    transition: .3s ease-in-out;
+}
+.loading span {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 6px;
+    width: 6px;
+    background: #fff;
+    border-radius: 50%;
+    animation: load 1s ease-in-out infinite both;
+}
+.loading span:first-child {
+    left: -10px;
+}
+.loading span:nth-child(2) {
+    animation-delay: .1s;
+}
+.loading span:nth-child(3) {
+    right: -10px;
+    animation-delay: .2s;
+}
+
+.btn.is-loading:after {
+    transform: translate(-50%, -150%);
+    opacity: 0;
+}
+.is-loading .loading {
+    transform: translateY(0);
+    opacity: 1;
+}
+.btn.is-recording:before {
+    background: red;
+}
+
+@keyframes load {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.form-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 70px;
+    color: #efefef;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: .3s ease-in-out;
+}
+.form-message.is-visible {
+    margin-top: 50px;
+    visibility: visible;
+    opacity: 1;
+}
