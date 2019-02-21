@@ -10,7 +10,7 @@ You need [Composer](https://getcomposer.org/) to install this repository.
 
 ### Installing
 
-Go to [https://cloud.google.com/speech-to-text/](https://cloud.google.com/speech-to-text/) and create an account to get a "credential.json" file, and paste it in the root directory.
+Go to [https://cloud.google.com/speech-to-text/](https://cloud.google.com/speech-to-text/), create an account to get a "credential.json" file, and paste it in the root directory.
 
 Install dependencies:
 
